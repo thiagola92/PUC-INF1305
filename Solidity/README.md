@@ -139,3 +139,40 @@ function get() public view returns (uint oNumeroQueFoiSorteado){
     return numeroSorteado;
 }
 ```
+
+# If vs Require
+If usa a lógica padrão de if em computação, ou seja, se a condição for falsa ele vai para o próximo else ou continua o bloco de código.  
+
+Require é uma maneira de lidar com erros, ou seja, se a condição for falsa toda a execução do código para e você volta para o estado anterior.  
+
+**If** quando falso continua a execução do código.  
+**Require** quando falso da rollback.  
+
+```Solidity
+if(numero > 0) {
+    //...
+}
+```
+
+```Solidity
+require(numero > 0, "Não foi possivel executar a operação");
+```
+
+# Revert
+A função `revert` retorna ao estado anterior.  
+Ela é utilizada pela função `require` quando a condição é falsa.  
+
+As duas maneiras a seguir são equivalentes  
+
+```Solidity
+if (x < 0)
+    revert("Not enough Ether provided.");
+```
+
+```Solidity
+require(x < 0, "Not enough Ether provided.");
+```
+
+# Assert vs Require
+**Assert** consome todo o gas mesmo que lance um erro  
+**Require** não gasta gas se lançar um erro  

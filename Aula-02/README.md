@@ -11,6 +11,7 @@
 |                                                       |     |
 
 As camadas marcadas com *B* fazem parte do blockchain.  
+Ethereum faz parte da camada **Plataforma / Protocolo**.  
 
 # Contrato Inteligente
 Em inglês: Smart Contract  
@@ -37,6 +38,14 @@ Você escreve na linguagem Java, compila para byte code que o JVM consiga entend
 A mesma coisa vale para o EVM, você escreve um contrato inteligente que ao ser compilado, O EVM consegue interpretar.  
 Você consegue escrever um contrato inteligente em Solidity ou Serpent ou outra linguagem que o EVM conheça.  
 
-# Gas & Wei
-Alterar informações no blockchain custa Gas.  
-Ler informação de dentro do contrato não custa Gas.  
+# Máquina de Estado
+Blockchain funciona que nem uma máquina de estado, dada uma transição você sai do estado A para o estado B.  
+
+* Mudança de estado tem custo...  
+  * No caso da rede Ethereum custa **Gas**.  
+    * Qualquer alteração no contrato exige uma quantidade de **gas** equivalente ao esforço computacional de mudar aquele contrato.  
+  * Contratos mais complexos custam mais **gas**.  
+    * Você paga o **gas** para quem fizer a mineração desse contrato, ou seja, quem fizer a mudança que você pediu.  
+* Consultar informação não custa **gas**.  
+
+
