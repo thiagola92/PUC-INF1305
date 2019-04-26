@@ -48,4 +48,14 @@ Blockchain funciona que nem uma máquina de estado, dada uma transição você s
     * Você paga o **gas** para quem fizer a mineração desse contrato, ou seja, quem fizer a mudança que você pediu.  
 * Consultar informação não custa **gas**.  
 
+Você pode descobrir mais sobre o gasto de gas na página 25 de:  
+https://ethereum.github.io/yellowpaper/paper.pdf  
+Video falando mais sobre o assunto:  
+https://www.youtube.com/watch?v=yFb2nuUUDX0  
 
+# Ether
+
+1 wei == 1  
+1 szabo == 1e12  
+1 finney == 1e15  
+1 ether == 1e18  

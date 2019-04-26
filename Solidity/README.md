@@ -1,6 +1,6 @@
 Não vou entrar em muitos detalhes, documentação explica bem melhor.  
 
-# Versão
+# Version
 `pragma solidity ^0.4.0;`  
 
 Indicar a versão é utilizado como um controle de segurança. Tudo que faz é dar erro se a versão do compilador não for a mesma.  
@@ -18,7 +18,7 @@ Ex:
 `pragma solidity >=0.4.22;`  
 `pragma solidity >=0.4.22 <0.7.0;`  
 
-# Contrato
+# Contract
 O nome do arquivo não precisa ser o mesmo que o contrato.  
 
 myfirstcontract.sol  
@@ -41,7 +41,7 @@ contract OtherExample {
 }
 ```
 
-# Variável
+# Variable
 
 ```Solidity
 contract ContractName {
@@ -57,7 +57,7 @@ contract ContractName {
 }
 ```
 
-# Função
+# Function
 Dependendo da versão você pode encontrar mudanças  
 
 ```Solidity
@@ -176,3 +176,183 @@ require(x < 0, "Not enough Ether provided.");
 # Assert vs Require
 **Assert** consome todo o gas mesmo que lance um erro  
 **Require** não gasta gas se lançar um erro  
+
+# Constructor
+Nas versões antigas uma função com o nome do contrato era o construtor.  
+ 
+```Solidity
+pragma solidity ^0.4.0;
+
+contract GuardaLoteria {
+    uint private numeroSorteado;
+    
+    function GuardaLoteria(uint numeroInicial) public {
+        numeroSorteado = numeroInicial;
+    }
+}
+```
+
+Porém isso podia causar problemas em casos onde o contrato tem o nome alterado, então foi criado uma keyword para referênciar construtores.  
+
+```Solidity
+pragma solidity ^0.5.7;
+
+contract GuardaLoteria {
+    uint private numeroSorteado;
+    
+    constructor(uint numeroInicial) public {
+        numeroSorteado = numeroInicial;
+    }
+}
+```
+
+# Modifier
+
+```Solidity
+modifier FOO() {
+    // code here
+    _;
+    // or code here
+}
+
+function BAR() public FOO() {
+    // normal code here
+}
+```
+
+
+Ao linkar um modifier `FOO` com uma função `BAR`, você altera como você chama a função `BAR`.  
+Agora ao invês de você chamar a função `BAR`, você chama `FOO`.  
+`FOO` substitui `_` pela função `BAR` da maneira que você chamou ela.    
+
+Em outras palavras, chamar `BAR` é equivalente a:  
+
+```Solidity
+modifier FOO() {
+    // code here
+    BAR();
+    // or code here
+}
+```
+
+---
+
+Se o `BAR` foi chamado com algum parâmetro, esses parâmetros vão ser chamados normalmente sem você precisar escrever eles como argumentos no `FOO`.  
+
+```Solidity
+modifier FOO() {
+    
+    _;          // vai chamar BAR(X, Y, Z);
+    
+}
+
+function BAR(int X, int Y, int Z) public FOO() {
+    // normal code here
+}
+```
+
+---
+
+Você pode fazer `FOO` receber esses argumentos se você declarar eles no modifier `FOO` e na função `BAR`.  
+
+```Solidity
+modifier FOO(X, Y, Z) {
+    
+    _;          // vai chamar BAR(X, Y, Z);
+    
+}
+
+function BAR(int X, int Y, int Z) public FOO(X, Y, Z) {
+    // normal code here
+}
+```
+
+Dessa maneira o modifier pode receber apenas os parâmetros que o interessa.  
+
+---
+
+Exemplo que faz mais sentido:  
+
+```Solidity
+pragma solidity ^0.5.7;
+
+contract Pessoa {
+    int private age = 0;
+    
+    function setAge(int newAge) public impossibleAge() {
+        age = newAge;
+    }
+    
+    function getAge() view public returns(int) {
+        return age;
+    }
+    
+    modifier impossibleAge() {
+        _;
+        if(age < 0) {
+            age = 0;
+        }
+    }
+}
+```
+
+Se você chamar `setAge(-1)` o `impossibleAge()` é executado da seguinte maneira  
+
+```Solidity
+modifier impossibleAge() {
+    setAge(-1);
+    if(age < 0) {
+        age = 0;
+    }
+}
+```
+
+---  
+
+Outro exemplo que faz mais sentido:  
+
+```Solidity
+pragma solidity ^0.5.7;
+
+contract Pessoa {
+    int private age = 0;
+    
+    function setAge(int newAge) public impossibleAge(newAge) {
+        age = newAge;
+    }
+    
+    function getAge() view public returns(int) {
+        return age;
+    }
+    
+    modifier impossibleAge(int age) {
+        require(age >= 0, "idade inválida");
+        _;
+    }
+}
+```
+
+Se você chamar `setAge(-1)` o `impossibleAge()` é executado da seguinte maneira  
+
+```Solidity
+modifier impossibleAge(int newAge) {
+    require(newAge >= 0, "idade inválida");
+    setAge(-1);
+}
+```
+
+# Address
+Existem dois tipos de address: `address` e `address payable`.  
+
+* `address`
+    * `address.balance`
+        * A quantidade de Wei que esse endereço possui
+* `address payable`
+    * `address.balance`
+        * A quantidade de Wei que esse endereço possui
+    * `address.transfer(uint256 amount)`
+        * Transfere para esse endereço uma quantidade de Wei, reverte a operação em caso de falha.
+    * `address.send(uint256 amount) returns (bool)`
+        * Transfere para esse endereço uma quantidade de Wei, retorna falso em caso de falha.
+
+\* Funções de baixo nível não nos interessam no momento
