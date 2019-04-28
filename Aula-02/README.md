@@ -42,10 +42,9 @@ Você consegue escrever um contrato inteligente em Solidity ou Serpent ou outra 
 Blockchain funciona que nem uma máquina de estado, dada uma transição você sai do estado A para o estado B.  
 
 * Mudança de estado tem custo...  
-  * No caso da rede Ethereum custa **Gas**.  
-    * Qualquer alteração no contrato exige uma quantidade de **gas** equivalente ao esforço computacional de mudar aquele contrato.  
-  * Contratos mais complexos custam mais **gas**.  
-    * Você paga o **gas** para quem fizer a mineração desse contrato, ou seja, quem fizer a mudança que você pediu.  
+  * No caso da rede Ethereum, o esforço que uma máquina teve que fazer para mudar o estado da rede blockchain é chamado de **Gas**.  
+  * Você tem que pagar quem teve o trabalho de fazer essa mudança de estado no blockchain, por isso qualquer mudança custa **ether**.  
+  * Contratos mais complexos custam mais **gas** pois as máquinas tem mais trabalho, ou seja, custam mais **ether** também.  
 * Consultar informação não custa **gas**.  
 
 Você pode descobrir mais sobre o gasto de gas na página 25 de:  

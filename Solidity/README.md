@@ -140,6 +140,17 @@ function get() public view returns (uint oNumeroQueFoiSorteado){
 }
 ```
 
+---
+
+A keyword `payable` faz com que aquela função possa receber Ether.  
+
+```Solidity
+function receiveEther() public payable {
+    // ....
+}
+```
+
+
 # If vs Require
 If usa a lógica padrão de if em computação, ou seja, se a condição for falsa ele vai para o próximo else ou continua o bloco de código.  
 
@@ -356,3 +367,55 @@ Existem dois tipos de address: `address` e `address payable`.
         * Transfere para esse endereço uma quantidade de Wei, retorna falso em caso de falha.
 
 \* Funções de baixo nível não nos interessam no momento
+
+# Payable
+Basicamente a keyword `payable` sempre é usada para movimentar Ether.  
+Se usada com uma variável `address`, aquela variável pode transferir Ether.  
+Se usada com uma função `function x() payable`, aquela função pode receber Ether.  
+
+# Conversion
+
+* Implicita
+    * Se puder ser convertido, vai converter normalmente
+    * `address a = 0x123`
+    * `uint160 b = a`
+* Explicita
+    * Existe uma função com o nome do tipo de variável justamente para converter
+    * `int8 y = -3`
+    * `uint x = uint(y)`
+        * x não vai ser -3, vai ser 0xfff...fd
+
+# Return
+Em solidity você retorna uma tupla, ou seja, você pode retornar vários tipos e valores.  
+
+```Solidity
+function get2() public payable returns(address, int, string memory, bool){
+    return (msg.sender, 1, "sim", true);
+}
+```
+
+# Delete
+Em Solidity não existe o conceito de "null" ou "undefined", mas variáveis sempre tem um valor inicial. Delete faz com que aquela variável volte justamente para o valor inicial.  
+
+* `int a`
+    * `delete a`, faz com quem `a = 0`
+* `int[] a`
+    * `delete a`, faz com que o array armazene um array com tamanho 0
+* `a[x]`
+    * `delete a[x]`, faz com que remova o elemento do array, mas deixa todos os outros elementos e o tamanho do array como estavam antes
+    * Basicamente deixa um buraco no array
+* `struct a {...}`
+    * `delete a`, faz um delete em todos os elementos na struct
+* `mapping(int => int) a`
+    * `delete a`, não faz nada no mapping
+# Self Desctruct
+Destroi o contrato e envia todo o ether daquele contrato para o endereço escolhido.  
+`selfdestruct(address)`  
+
+Você ainda pode tentar se comunicar com o contrato mas vai resultar em nada (se você enviar ether para um contrato morto, você está mandando o ether para o lixo, nunca mais irá ver aquele ether)  
+
+```Solidity
+function endContract() public {
+    selfdestruct(msg.sender);
+}
+```
