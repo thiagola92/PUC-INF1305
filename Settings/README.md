@@ -51,3 +51,16 @@
   * "Node.js runtime" obrigatório estar selecionado para instalação
   * "Npm package manager" recomendo estar selecionado para instalação
   * "Add to PATH" recomendo estar selecionado para instalação
+
+# Instalando Truffle
+**Windows 10**
+* Abra o cmd ou powershell
+* Digite `npm install -g truffle`
+  * Precisa no npm instalado e no adicionado no path
+
+## Box
+**Truffle** tem o conceito de Box para integrar **Truffle** com outras Frameworks
+* Para integrar **Truffle** com uma Framework, procure ver se essa Framework existe na lista no site
+  * https://truffleframework.com/boxes
+* Chame `truffle unbox XXX`, onde XXX é o nome da framework
+  * Por exemplo, para integrar a Box de React utilize o comando `truffle unbox react`  
