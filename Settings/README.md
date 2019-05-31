@@ -65,7 +65,8 @@
   * Aceite instalar Python 2 + Visual Studio Build Tools
 
 ## Ubuntu
-Escolha como vai instalar, o recomendado atualmente é apt
+Escolha como vai instalar, o recomendado atualmente é apt  
+Se você escolher snap talvez você não consiga utilizar truffle  
 
 ### Apt
 * Abra o terminal
