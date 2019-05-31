@@ -71,7 +71,7 @@
     * Tente `npm install -g node-gyp`
     * Tente `npm install -g windows-build-tools`
       * Se falhar verifique se ele deixou o "vs_BuildTools.exe" no diretório do seu usuário (ex: C:\Users\thiagola92\.windows-build-tools)
-      * Instale você mesmo clicando duas vezes
+      * Instale/atualize você mesmo clicando duas vezes
 
 #### Running
 * `truffle compile`
