@@ -65,3 +65,9 @@
 * Chame `truffle unbox XXX`, onde XXX é o nome da framework
   * Por exemplo, para instalar **Truffle** integrado com React utilize o comando `truffle unbox react`  
 * Isso vai criar um projeto no diretório corrente (de preferência vá para um vazio)
+
+## Running
+* `truffle compile`
+* `truffle migrate`
+* `npm run start`
+  * Se não funcionar tente ir para a pasta client (`cd client`)
