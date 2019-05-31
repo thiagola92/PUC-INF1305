@@ -97,6 +97,7 @@ Se você escolher snap talvez você não consiga utilizar truffle
   * Tente `npm install -g windows-build-tools`
     * Se falhar verifique se ele deixou o "vs_BuildTools.exe" no diretório do seu usuário (ex: C:\Users\thiagola92\.windows-build-tools)
     * Instale/atualize você mesmo clicando duas vezes
+* `npm install`
 
 ### Running
 * `truffle compile`
@@ -125,3 +126,4 @@ Se você escolher snap talvez você não consiga utilizar truffle
     * `sudo -i`
     * Vá até a pasta utilizando os comandos de terminal (ex: `cd ....\fooBar`)
     * `sudo truffle unbox react`
+* `npm install`
