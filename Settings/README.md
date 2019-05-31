@@ -13,15 +13,6 @@
   * https://metamask.io/
 * Se registre no Metamask
   * Salve em algum lugar seguro sua "Wallet Seed"
-
-# Instalando Node.js
-**Windows 10**
-* Baixe Node.js
-  * https://nodejs.org/en/
-* Instale Node.js
-  * "Node.js runtime" obrigatório estar selecionado para instalação
-  * "Npm package manager" recomendo estar selecionado para instalação
-  * "Add to PATH" recomendo estar selecionado para instalação
     
 # Linkando Metamask com endereço do Ganache
 * Abra o **Metamask**
@@ -52,3 +43,11 @@
   * Você não quer fazer esses testes em uma conta real sua  
 ![Imagem trocando de conta](changeaccount.png)  
 
+# Instalando Node.js
+**Windows 10**
+* Baixe Node.js
+  * https://nodejs.org/en/
+* Instale Node.js
+  * "Node.js runtime" obrigatório estar selecionado para instalação
+  * "Npm package manager" recomendo estar selecionado para instalação
+  * "Add to PATH" recomendo estar selecionado para instalação
