@@ -65,15 +65,16 @@
   * Aceite instalar Python 2 + Visual Studio Build Tools
 
 ## Ubuntu
-
-### Snap
-* Abra o terminal
-* `sudo snap install --edge node --classic`
+Escolha como vai instalar, o recomendado atualmente é apt
 
 ### Apt
 * Abra o terminal
 * `sudo apt-get install nodejs`
 * `sudo apt-get install npm`
+
+### Snap
+* Abra o terminal
+* `sudo snap install --edge node --classic`
 
 # Instalando Truffle
 
@@ -87,14 +88,14 @@
 * Para instalar **Truffle** integrado com uma Framework, escolha a Framework dentro das existentes
   * https://truffleframework.com/boxes
 * Eu escolhi react
-* Chame ``truffle unbox react`
+* Chame `truffle unbox react`
   * Se falhar:
-    * Tenha certeza que tenha git no caminho de variáveis
-    * Tenha certeza que python 2 e visual studio build tools tenha sido instalado
-    * Tente `npm install -g node-gyp`
-    * Tente `npm install -g windows-build-tools`
-      * Se falhar verifique se ele deixou o "vs_BuildTools.exe" no diretório do seu usuário (ex: C:\Users\thiagola92\.windows-build-tools)
-      * Instale/atualize você mesmo clicando duas vezes
+  * Tenha certeza que tenha git no caminho de variáveis
+  * Tenha certeza que python 2 e visual studio build tools tenha sido instalado
+  * Tente `npm install -g node-gyp`
+  * Tente `npm install -g windows-build-tools`
+    * Se falhar verifique se ele deixou o "vs_BuildTools.exe" no diretório do seu usuário (ex: C:\Users\thiagola92\.windows-build-tools)
+    * Instale/atualize você mesmo clicando duas vezes
 
 ### Running
 * `truffle compile`
@@ -106,7 +107,20 @@
 * Abra o terminal
 * `sudo npm install -g truffle`
   * Se falhar:
-    * `sudo npm install -g truffle --scripts-prepend-node-path`
+  * `sudo npm install -g truffle --scripts-prepend-node-path`
     * Se falhar:
       * Tente baixar uma versão mais velha
       * `sudo npm install -g truffle@5.0.19 --scripts-prepend-node-path`
+      * Se falhar, vire superuser
+        * `sudo -i`
+        * `sudo npm install -g truffle@5.0.19 --scripts-prepend-node-path`
+### Box
+**Truffle** tem o conceito de Box para integrar **Truffle** com outras Frameworks
+* Para instalar **Truffle** integrado com uma Framework, escolha a Framework dentro das existentes
+  * https://truffleframework.com/boxes
+* Eu escolhi react
+* Chame `truffle unbox react`
+  * Se falhar:
+    * `sudo -i`
+    * Vá até a pasta utilizando os comandos de terminal (ex: `cd ....\fooBar`)
+    * `sudo truffle unbox react`
