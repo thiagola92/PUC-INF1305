@@ -16,12 +16,22 @@
     
 # Linkando Metamask com endereço do Ganache
 * Abra o **Metamask**
-* Altere a Network clicando em "Main Ethereum Network" (Default)
-* Selecione "Custom RPC"
-  * ![Imagem da opção custom rpc](customRPC.png)
+* Altere a Network clicando em "Main Ethereum Network" (Default)  
+* Selecione "Custom RPC"   
+![Imagem da opção custom rpc](customRPC.png)  
 * Abra o **Ganache**
-* Pegue o link para o RPC Server no Ganache
-  * ![Imagem do RPC server](rpcServer.png)
+* Pegue o link para o RPC Server no Ganache  
+![Imagem do RPC server](rpcServer.png)  
+* No **Metamask** termine de criar e salve  
+![Imagem de criando custom rpc](customRPCsave.png)  
+* Selecione o seu RPC para conectar  
+![Imagem do rpc conectado](foobar.png)  
+* Agora você quer botar uma dessas contas do **Ganache** no **Metamask**
+* No **Metamask** clique sua conta  
+* Selecione importar conta  
+![Imagem da opcao importar account](importaccount.png)  
+* Para importar você precisa da chave primária de uma das contas
+* Isso pode ser obtido no **Ganache**  
 
 # Instalando Node.js
 **Windows 10**
