@@ -13,6 +13,15 @@
   * https://metamask.io/
 * Se registre no Metamask
   * Salve em algum lugar seguro sua "Wallet Seed"
+
+# Instalando Node.js
+**Windows 10**
+* Baixe Node.js
+  * https://nodejs.org/en/
+* Instale Node.js
+  * "Node.js runtime" obrigatório estar selecionado para instalação
+  * "Npm package manager" recomendo estar selecionado para instalação
+  * "Add to PATH" recomendo estar selecionado para instalação
     
 # Linkando Metamask com endereço do Ganache
 * Abra o **Metamask**
@@ -27,17 +36,19 @@
 * Selecione o seu RPC para conectar  
 ![Imagem do rpc conectado](foobar.png)  
 * Agora você quer botar uma dessas contas do **Ganache** no **Metamask**
-* No **Metamask** clique sua conta  
+* Para importar você precisa da chave privada de uma das contas
+* Isso pode ser obtido no **Ganache**
+* Procure a conta a qual você quer se conectar como
+* Clique no simbolo da chave para exibir a chave privada  
+![Imagem da opcao mostrar a chave](showkey.png)  
+* Copie essa chave privada  
+![Imagem da chave privada](privatekey.png)  
+* No **Metamask** clique na sua conta  
 * Selecione importar conta  
 ![Imagem da opcao importar account](importaccount.png)  
-* Para importar você precisa da chave primária de uma das contas
-* Isso pode ser obtido no **Ganache**  
+* Importe com essa chave privada  
+![Imagem importando conta](importaccountkey.png)  
+* Tenha **CERTEZA** que trocou a conta para essa conta do **Ganache**  
+  * Você não quer fazer esses testes em uma conta real sua  
+![Imagem trocando de conta](changeaccount.png)  
 
-# Instalando Node.js
-**Windows 10**
-* Baixe Node.js
-  * https://nodejs.org/en/
-* Instale Node.js
-  * "Node.js runtime" obrigatório estar selecionado para instalação
-  * "Npm package manager" recomendo estar selecionado para instalação
-  * "Add to PATH" recomendo estar selecionado para instalação
