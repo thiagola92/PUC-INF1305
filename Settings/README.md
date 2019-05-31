@@ -68,6 +68,10 @@
   * Se falhar:
     * Tenha certeza que tenha git no caminho de variáveis
     * Tenha certeza que python 2 e visual studio build tools tenha sido instalado
+    * Tente `npm install -g node-gyp`
+    * Tente `npm install -g windows-build-tools`
+      * Se falhar verifique se ele deixou o "vs_BuildTools.exe" no diretório do seu usuário (ex: C:\Users\thiagola92\.windows-build-tools)
+      * Instale você mesmo clicando duas vezes
 
 #### Running
 * `truffle compile`
