@@ -1,4 +1,5 @@
 Não vou entrar em muitos detalhes, documentação explica bem melhor.  
+https://solidity.readthedocs.io/en/latest/index.html
 
 # Version
 `pragma solidity ^0.4.0;`  
