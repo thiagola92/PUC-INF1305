@@ -51,6 +51,7 @@
   * "Node.js runtime" obrigatório estar selecionado para instalação
   * "Npm package manager" recomendo estar selecionado para instalação
   * "Add to PATH" recomendo estar selecionado para instalação
+  * Aceite instalar Python 2 + Visual Studio Build Tools
 
 # Instalando Truffle
 **Windows 10**
@@ -62,9 +63,11 @@
 **Truffle** tem o conceito de Box para integrar **Truffle** com outras Frameworks
 * Para instalar **Truffle** integrado com uma Framework, escolha a Framework dentro das existentes
   * https://truffleframework.com/boxes
-* Chame `truffle unbox XXX`, onde XXX é o nome da framework
-  * Por exemplo, para instalar **Truffle** integrado com React utilize o comando `truffle unbox react`  
-* Isso vai criar um projeto no diretório corrente (de preferência vá para um vazio)
+* Eu escolhi react
+* Chame ``truffle unbox react`
+  * Se falhar:
+    * Tenha certeza que tenha git no caminho de variáveis
+    * Tenha certeza que python 2 e visual studio build tools tenha sido instalado
 
 #### Running
 * `truffle compile`
