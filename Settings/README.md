@@ -1,14 +1,24 @@
 # Instalando Ganache 
-**Windows 10**  
+
+## Windows 10
 * Baixe Ganache
   * https://truffleframework.com/ganache
 * Instale Ganache
   * Se o seu windows 10 não reconhecer o formato .appx
     * Abra a Microsoft Store
     * Instale App Installer
+    
+## Ubuntu
+* Baixe Ganache
+  * https://truffleframework.com/ganache
+* Para abrir o formato .AppImage você precisa tornar executável
+  * Botão direito na aplicação
+  * Na tab "permissions"
+  * Marque "allow executing file as program" 
 
 # Instalando Metamask
-**Chrome**
+
+## Chrome
 * Instale a extensão Metamask para o Chrome
   * https://metamask.io/
 * Se registre no Metamask
@@ -44,7 +54,8 @@
 ![Imagem trocando de conta](changeaccount.png)  
 
 # Instalando Node.js
-**Windows 10**
+
+## Windows 10
 * Baixe Node.js
   * https://nodejs.org/en/
 * Instale Node.js
@@ -54,12 +65,13 @@
   * Aceite instalar Python 2 + Visual Studio Build Tools
 
 # Instalando Truffle
-**Windows 10**
+
+## Windows 10
 * Abra o cmd ou powershell
 * Digite `npm install -g truffle`
   * Precisa no npm instalado e no adicionado no path
 
-#### Box
+### Box
 **Truffle** tem o conceito de Box para integrar **Truffle** com outras Frameworks
 * Para instalar **Truffle** integrado com uma Framework, escolha a Framework dentro das existentes
   * https://truffleframework.com/boxes
@@ -73,7 +85,7 @@
       * Se falhar verifique se ele deixou o "vs_BuildTools.exe" no diretório do seu usuário (ex: C:\Users\thiagola92\.windows-build-tools)
       * Instale/atualize você mesmo clicando duas vezes
 
-#### Running
+### Running
 * `truffle compile`
 * `truffle migrate`
 * `npm run start`
