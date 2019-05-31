@@ -64,6 +64,10 @@
   * "Add to PATH" recomendo estar selecionado para instalação
   * Aceite instalar Python 2 + Visual Studio Build Tools
 
+## Ubuntu
+* Abra o terminal
+* `sudo snap install --edge node --classic`
+
 # Instalando Truffle
 
 ## Windows 10
@@ -90,3 +94,11 @@
 * `truffle migrate`
 * `npm run start`
   * Se não funcionar tente ir para a pasta client (`cd client`)
+
+## Ubuntu
+* Abra o terminal
+* `sudo npm install -g truffle`
+  * Se falhar:
+    * `sudo npm install -g truffle --scripts-prepend-node-path`?
+    * `sudo npm install -g solc --scripts-prepend-node-path`?
+    * `sudo npm install -g postinstall --scripts-prepend-node-path`?
