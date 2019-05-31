@@ -109,13 +109,16 @@ Se você escolher snap talvez você não consiga utilizar truffle
 * Abra o terminal
 * `sudo npm install -g truffle`
   * Se falhar:
-  * `sudo npm install -g truffle --scripts-prepend-node-path`
-    * Se falhar:
-      * Tente baixar uma versão mais velha
-      * `sudo npm install -g truffle@5.0.19 --scripts-prepend-node-path`
-      * Se falhar, vire superuser
-        * `sudo -i`
-        * `sudo npm install -g truffle@5.0.19 --scripts-prepend-node-path`
+   * `sudo npm install -g truffle --scripts-prepend-node-path`
+     * Se falhar:
+       * Tente baixar uma versão mais velha
+       * `sudo npm install -g truffle@5.0.19 --scripts-prepend-node-path`
+        * Se falhar, vire superuser
+          * `sudo -i`
+          * `sudo npm install -g truffle@5.0.19 --scripts-prepend-node-path`
+           * Se falhar:
+            * `sudo apt-get install python2.7`
+        
 ### Box
 **Truffle** tem o conceito de Box para integrar **Truffle** com outras Frameworks
 * Para instalar **Truffle** integrado com uma Framework, escolha a Framework dentro das existentes
