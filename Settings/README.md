@@ -60,7 +60,8 @@
 
 ## Box
 **Truffle** tem o conceito de Box para integrar **Truffle** com outras Frameworks
-* Para integrar **Truffle** com uma Framework, procure ver se essa Framework existe na lista no site
+* Para instalar **Truffle** integrado com uma Framework, escolha a Framework dentro das existentes
   * https://truffleframework.com/boxes
 * Chame `truffle unbox XXX`, onde XXX é o nome da framework
-  * Por exemplo, para integrar a Box de React utilize o comando `truffle unbox react`  
+  * Por exemplo, para instalar **Truffle** integrado com React utilize o comando `truffle unbox react`  
+* Isso vai criar um projeto no diretório corrente (de preferência vá para um vazio)
