@@ -58,7 +58,7 @@
 * Digite `npm install -g truffle`
   * Precisa no npm instalado e no adicionado no path
 
-## Box
+#### Box
 **Truffle** tem o conceito de Box para integrar **Truffle** com outras Frameworks
 * Para instalar **Truffle** integrado com uma Framework, escolha a Framework dentro das existentes
   * https://truffleframework.com/boxes
@@ -66,7 +66,7 @@
   * Por exemplo, para instalar **Truffle** integrado com React utilize o comando `truffle unbox react`  
 * Isso vai criar um projeto no diretório corrente (de preferência vá para um vazio)
 
-## Running
+#### Running
 * `truffle compile`
 * `truffle migrate`
 * `npm run start`
