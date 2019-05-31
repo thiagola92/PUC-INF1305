@@ -65,8 +65,15 @@
   * Aceite instalar Python 2 + Visual Studio Build Tools
 
 ## Ubuntu
+
+### Snap
 * Abra o terminal
 * `sudo snap install --edge node --classic`
+
+### Apt
+* Abra o terminal
+* `sudo apt-get install nodejs`
+* `sudo apt-get install npm`
 
 # Instalando Truffle
 
