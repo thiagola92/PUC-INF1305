@@ -106,6 +106,7 @@
 * Abra o terminal
 * `sudo npm install -g truffle`
   * Se falhar:
-    * `sudo npm install -g truffle --scripts-prepend-node-path`?
-    * `sudo npm install -g solc --scripts-prepend-node-path`?
-    * `sudo npm install -g postinstall --scripts-prepend-node-path`?
+    * `sudo npm install -g truffle --scripts-prepend-node-path`
+    * Se falhar:
+      * Tente baixar uma versão mais velha
+      * `sudo npm install -g truffle@5.0.19 --scripts-prepend-node-path`
