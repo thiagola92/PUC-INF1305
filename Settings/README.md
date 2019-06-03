@@ -121,10 +121,10 @@ Terminal > `truffle unbox react`
 
 Se aparecer que falhou em dar `cd client && npm install`  
 Abra o terminal na pasta do projeto ou caminhe até ela   
-Terminal > `cd client` > `npm install` > `npm audit fix`  
+Terminal > `cd client` > `npm install` 
 
 Se aparecer o erro com cdigo EISGIT  
-Terminal > `rm -rf node_modules/websocket/.git` > `npm install` > `npm audit fix` > `cd ..`  
+Terminal > `rm -rf node_modules/websocket/.git` > `npm install` > `cd ..`  
 
 ### Running
 Abra o terminal na pasta do projeto ou caminhe até ela   
