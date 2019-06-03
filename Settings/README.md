@@ -2,27 +2,27 @@
 
 ## Windows 10
 * Baixe Ganache
-  * https://truffleframework.com/ganache
+ * https://truffleframework.com/ganache
 * Instale Ganache
-  * Se o seu windows 10 não reconhecer o formato .appx
-    * Abra a Microsoft Store
-    * Instale App Installer
+ * Se o seu windows 10 não reconhecer o formato .appx
+  * Abra a Microsoft Store
+  * Instale App Installer
     
 ## Ubuntu
 * Baixe Ganache
-  * https://truffleframework.com/ganache
+ * https://truffleframework.com/ganache
 * Para abrir o formato .AppImage você precisa tornar executável
-  * Botão direito na aplicação
-  * Na tab "permissions"
-  * Marque "allow executing file as program" 
+ * Botão direito na aplicação
+ * Na tab "permissions"
+ * Marque "allow executing file as program" 
 
 # Instalando Metamask
 
 ## Chrome
 * Instale a extensão Metamask para o Chrome
-  * https://metamask.io/
+ * https://metamask.io/
 * Se registre no Metamask
-  * Salve em algum lugar seguro sua "Wallet Seed"
+ * Salve em algum lugar seguro sua "Wallet Seed"
     
 # Linkando Metamask com endereço do Ganache
 * Abra o **Metamask**
@@ -50,83 +50,84 @@
 * Importe com essa chave privada  
 ![Imagem importando conta](importaccountkey.png)  
 * Tenha **CERTEZA** que trocou a conta para essa conta do **Ganache**  
-  * Você não quer fazer esses testes em uma conta real sua  
+ * Você não quer fazer esses testes em uma conta real sua  
 ![Imagem trocando de conta](changeaccount.png)  
 
 # Instalando Node.js
 
 ## Windows 10
 * Baixe Node.js
-  * https://nodejs.org/en/
+ * https://nodejs.org/en/
 * Instale Node.js
-  * "Node.js runtime" obrigatório estar selecionado para instalação
-  * "Npm package manager" recomendo estar selecionado para instalação
-  * "Add to PATH" recomendo estar selecionado para instalação
-  * Aceite instalar Python 2 + Visual Studio Build Tools
+ * "Node.js runtime" obrigatório estar selecionado para instalação
+ * "Npm package manager" recomendo estar selecionado para instalação
+ * "Add to PATH" recomendo estar selecionado para instalação
+ * Aceite instalar Python 2 + Visual Studio Build Tools
 
 ## Ubuntu
 
 ### Apt
 * Abra o terminal
-* `sudo apt-get install nodejs`
-* `sudo apt-get install npm`
+* Digite `sudo apt-get install nodejs`
+* Digite `sudo apt-get install npm`
 
 ### Snap
 * Abra o terminal
-* `sudo snap install --edge node --classic`
+* Digite `sudo snap install --edge node --classic`
  * Ou escolha uma versão que você considera mais segura/estável
+ * Por exemplo, `sudo snap install --channel=11/stable node --classic`
 
 # Instalando Web3
 
 ## Ubuntu
 
-* Vá para uma pasta vazia
-* `npm init`
-* `npm install web3`
+* Abra o terminal em uma pasta vazia (pasta do projeto)
+* Digite `npm init`
+* Digite `npm install web3`
 
 # Instalando Truffle
 
 ## Windows 10
-* Abra o cmd ou powershell
-* Digite `npm install -g truffle`
-  * Precisa no npm instalado e no adicionado no path
+* Abra o cmd ou powershell em uma pasta vazia (pasta do projeto)
+* Digite `npm install truffle`
+ * Precisa do npm instalado e adicionado no path
 
 ### Box
 **Truffle** tem o conceito de Box para integrar **Truffle** com outras Frameworks
 * Para instalar **Truffle** integrado com uma Framework, escolha a Framework dentro das existentes
-  * https://truffleframework.com/boxes
+ * https://truffleframework.com/boxes
 * Eu escolhi react
 * Chame `truffle unbox react`
-  * Se falhar:
-  * Tenha certeza que tenha git no caminho de variáveis
-  * Tenha certeza que python 2 e visual studio build tools tenha sido instalado
-  * Tente `npm install -g node-gyp`
-  * Tente `npm install -g windows-build-tools`
-    * Se falhar verifique se ele deixou o "vs_BuildTools.exe" no diretório do seu usuário (ex: C:\Users\thiagola92\.windows-build-tools)
-    * Instale/atualize você mesmo clicando duas vezes
+ * Se falhar:
+ * Tenha certeza que tenha git no caminho de variáveis
+ * Tenha certeza que python 2 e visual studio build tools tenha sido instalado
+ * Tente `npm install -g node-gyp`
+ * Tente `npm install -g windows-build-tools`
+  * Se falhar verifique se ele deixou o "vs_BuildTools.exe" no diretório do seu usuário (ex: C:\Users\thiagola92\.windows-build-tools)
+  * Instale/atualize você mesmo clicando duas vezes
 * `npm install`
 
 ### Running
 * `truffle compile`
 * `truffle migrate`
 * `npm run start`
-  * Se não funcionar tente ir para a pasta client (`cd client`)
+ * Se não funcionar tente ir para a pasta client (`cd client`)
 
 ## Ubuntu
 **NÃO CONSEGUI FAZER FUNCIONAR**
 
 * Abra o terminal
 * `sudo npm install -g truffle`
-  * Se falhar:
-   * `sudo npm install -g truffle --scripts-prepend-node-path`
-     * Se falhar:
-       * Tente baixar uma versão mais velha
+ * Se falhar:
+  * `sudo npm install -g truffle --scripts-prepend-node-path`
+   * Se falhar:
+     * Tente baixar uma versão mais velha
+     * `sudo npm install -g truffle@5.0.19 --scripts-prepend-node-path`
+      * Se falhar, vire superuser
+       * `sudo -i`
        * `sudo npm install -g truffle@5.0.19 --scripts-prepend-node-path`
-        * Se falhar, vire superuser
-          * `sudo -i`
-          * `sudo npm install -g truffle@5.0.19 --scripts-prepend-node-path`
-           * Se falhar:
-            * `sudo apt-get install python2.7`
+        * Se falhar:
+         * `sudo apt-get install python2.7`
         
 ### Box
 **Truffle** tem o conceito de Box para integrar **Truffle** com outras Frameworks
@@ -134,8 +135,8 @@
   * https://truffleframework.com/boxes
 * Eu escolhi react
 * Chame `truffle unbox react`
-  * Se falhar:
-    * `sudo -i`
-    * Vá até a pasta utilizando os comandos de terminal (ex: `cd ....\fooBar`)
-    * `sudo truffle unbox react`
+ * Se falhar:
+  * `sudo -i`
+  * Vá até a pasta utilizando os comandos de terminal (ex: `cd ....\fooBar`)
+  * `sudo truffle unbox react`
 * `npm install`
