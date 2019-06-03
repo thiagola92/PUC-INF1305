@@ -121,14 +121,14 @@ Terminal > `truffle unbox react`
 
 Se aparecer que falhou em dar `cd client && npm install`  
 Abra o terminal na pasta do projeto ou caminhe até ela   
-Terminal > `cd client` > `npm install` 
+Terminal > `cd client` > `npm install` > `npm audit fix`
 
 Se aparecer o erro com cdigo EISGIT  
-Terminal > `rm -rf node_modules/websocket/.git` > `npm install` > `cd ..`  
+Terminal > `rm -rf node_modules/websocket/.git` > `npm install` > `npm audit fix` > `cd ..`  
 
 ### Running
 Abra o terminal na pasta do projeto ou caminhe até ela   
 Terminal > `truffle compile` > `truffle migrate` > `cd client` > `npm run start`  
 
 Se aparecer um erro relacionado ao **react-scripts**  
-Terminal > `rm -rf node_modules/react-scripts/` > `npm install` > `npm run start`  
+Terminal > `rm -rf node_modules/react-scripts/` > `npm install` > `npm audit fix` > `npm run start`  
