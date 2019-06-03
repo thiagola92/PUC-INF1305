@@ -78,11 +78,10 @@
 # Instalando Web3
 
 ## Ubuntu
-```
-npm config set user 0
-npm config set unsafe-perm true
-sudo npm -g install web3 --scripts-prepend-node-path
-```
+
+* Vá para uma pasta vazia
+* `npm init`
+* `npm install web3`
 
 # Instalando Truffle
 
