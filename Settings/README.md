@@ -40,52 +40,50 @@ Metamask > Importe uma conta
 Bote a **chave privada** da conta do Ganache  
 ![Imagem importando conta](importaccountkey.png)  
 
-**Tenha CERTEZA que trocou a conta para essa conta do Ganache, você não quer fazer esses testes em uma conta real sua**  
+**Tenha CERTEZA que trocou a conta para essa conta do Ganache  
+Você não quer fazer esses testes em uma conta real sua**  
 ![Imagem trocando de conta](changeaccount.png)  
 
 # Instalando Node.js
 
 ## Windows 10
-* Baixe Node.js
- * https://nodejs.org/en/
-* Instale Node.js
- * "Node.js runtime" obrigatório estar selecionado para instalação
- * "Npm package manager" recomendo estar selecionado para instalação
- * "Add to PATH" recomendo estar selecionado para instalação
- * Aceite instalar Python 2 + Visual Studio Build Tools
+Baixe Node.js: https://nodejs.org/en/  
+Instale Node.js com as seguintes features:
+* Node.js runtime  
+* Npm package manager  
+* Add to PATH  
+* Python 2   
+* Visual Studio Build Tools  
 
 ## Ubuntu
 
 ### Apt
-* Abra o terminal
-* Digite `sudo apt-get install nodejs`
-* Digite `sudo apt-get install npm`
+Terminal > `sudo apt-get install nodejs` > `sudo apt-get install npm`  
 
 ### Snap
-* Abra o terminal
-* Digite `sudo snap install --edge node --classic`
- * Ou escolha uma versão que você considera mais segura/estável
- * Por exemplo, `sudo snap install --channel=11/stable node --classic`
+Terminal > `sudo snap install --channel=11/stable node --classic`  
+
+Atualizar o npm  
+Terminal > `sudo -i` > `sudo npm -g install npm`  
 
 # Instalando Web3
 
 ## Ubuntu
-
-* Abra o terminal na pasta do projeto
-* Digite `npm init`
-* Digite `npm install web3`
+Abra o terminal na pasta do projeto ou caminhe até ela  
+Terminal > `npm init` > `npm install web3`  
 
 # Instalando Truffle
 
 ## Windows 10
-* Abra o terminal na pasta do projeto
-* Digite `npm install truffle`
- * Precisa do npm instalado e adicionado no path
+Abra o terminal na pasta do projeto ou caminhe até ela  
+Terminal > `npm install truffle`  
 
 ### Box
-**Truffle** tem o conceito de Box para integrar **Truffle** com outras Frameworks
-* Para instalar **Truffle** integrado com uma Framework, escolha a Framework dentro das existentes
- * https://truffleframework.com/boxes
+Truffle tem o conceito de Box para integrar Truffle com as outras Frameworks.  
+Lista das Box: https://truffleframework.com/boxes  
+Estou utilizando a Box para **React**  
+
+
 * Eu escolhi react
 * Chame `truffle unbox react`
  * Se falhar:
@@ -98,25 +96,39 @@ Bote a **chave privada** da conta do Ganache
 * `npm install`
 
 ### Running
-* `truffle compile`
-* `truffle migrate`
-* `npm run start`
- * Se não funcionar tente ir para a pasta client (`cd client`)
+Abra o terminal na pasta do projeto ou caminhe até ela   
+Terminal > `truffle compile` > `truffle migrate` > `cd client` > `npm run start`  
 
 ## Ubuntu
-**NÃO CONSEGUI FAZER FUNCIONAR**
+Abra o terminal na pasta do projeto ou caminhe até ela   
+Terminal > `npm install truffle@5.0.19`  
 
-* Abra o terminal na pasta do projeto
-* `npm instalal truffle@5.0.19`
-        
+Verifique se o seu truffle está funcionando  
+Abra o terminal na pasta do projeto ou caminhe até ela  
+Terminal > `truffle`
+
+Se apareceu `truffle: command not found`  
+Em vez de `truffle` nos comandos, utilize `./node_modules/.bin/truffle`  
+Ex: `truffle compile` vai virar `./node_modules/.bin/truffle compile`
+
 ### Box
-**Truffle** tem o conceito de Box para integrar **Truffle** com outras Frameworks
-* Para instalar **Truffle** integrado com uma Framework, escolha a Framework dentro das existentes
-  * https://truffleframework.com/boxes
-* Eu escolhi react
-* Chame `truffle unbox react`
- * Se falhar:
-  * `sudo -i`
-  * Vá até a pasta utilizando os comandos de terminal (ex: `cd ....\fooBar`)
-  * `sudo truffle unbox react`
-* `npm install`
+Truffle tem o conceito de Box para integrar Truffle com as outras Frameworks.  
+Lista das Box: https://truffleframework.com/boxes  
+Estou utilizando a Box para **React**  
+
+Abra o terminal na pasta do projeto ou caminhe até ela   
+Terminal > `truffle unbox react`  
+
+Se aparecer que falhou em dar `cd client && npm install`  
+Abra o terminal na pasta do projeto ou caminhe até ela   
+Terminal > `cd client` > `npm install` > `npm audit fix`  
+
+Se aparecer o erro com cdigo EISGIT  
+Terminal > `rm -rf node_modules/websocket/.git` > `npm install` > `npm audit fix` > `cd ..`  
+
+### Running
+Abra o terminal na pasta do projeto ou caminhe até ela   
+Terminal > `truffle compile` > `truffle migrate` > `cd client` > `npm run start`  
+
+Se aparecer um erro relacionado ao **react-scripts**  
+Terminal > `rm -rf node_modules/react-scripts/` > `npm install` > `npm run start`  
