@@ -1,56 +1,46 @@
 # Instalando Ganache 
 
 ## Windows 10
-* Baixe Ganache
- * https://truffleframework.com/ganache
-* Instale Ganache
- * Se o seu windows 10 não reconhecer o formato .appx
-  * Abra a Microsoft Store
-  * Instale App Installer
+Baixe e instale Ganache: https://truffleframework.com/ganache  
+Se o seu windows 10 não reconhecer o formato .appx você precisa instalar **App Installer** na **Microsoft Store**  
     
 ## Ubuntu
-* Baixe Ganache
- * https://truffleframework.com/ganache
-* Para abrir o formato .AppImage você precisa tornar executável
- * Botão direito na aplicação
- * Na tab "permissions"
- * Marque "allow executing file as program" 
-
+Baixe e abra o Ganache: https://truffleframework.com/ganache  
+Para abrir o formato **.AppImage** você precisa tornar executável (right click > permissions > allow executing file as program)  
 # Instalando Metamask
 
 ## Chrome
-* Instale a extensão Metamask para o Chrome
- * https://metamask.io/
-* Se registre no Metamask
- * Salve em algum lugar seguro sua "Wallet Seed"
+Instale a extensão Metamask para o Chrome: https://metamask.io/  
+Você preicsa se registrar no Metamask e salvar em algum lugar seguro sua **Wallet Seed** para poder recuperar a conta  
     
 # Linkando Metamask com endereço do Ganache
-* Abra o **Metamask**
-* Altere a Network clicando em "Main Ethereum Network" (Default)  
-* Selecione "Custom RPC"   
-![Imagem da opção custom rpc](customRPC.png)  
-* Abra o **Ganache**
-* Pegue o link para o RPC Server no Ganache  
+
+Ganache > copie o link para o **RPC Server**  
 ![Imagem do RPC server](rpcServer.png)  
-* No **Metamask** termine de criar e salve  
+
+Metamask > Altere de **Main Ethereum Network** para **Custom RPC**   
+![Imagem da opção custom rpc](customRPC.png)  
+
+ Escolha um nome qualquer e bote o **RPC Server** copiado do Ganache  
 ![Imagem de criando custom rpc](customRPCsave.png)  
-* Selecione o seu RPC para conectar  
+
+Selecione o RPC Server que você acabou de criar    
 ![Imagem do rpc conectado](foobar.png)  
-* Agora você quer botar uma dessas contas do **Ganache** no **Metamask**
-* Para importar você precisa da chave privada de uma das contas
-* Isso pode ser obtido no **Ganache**
-* Procure a conta a qual você quer se conectar como
-* Clique no simbolo da chave para exibir a chave privada  
+
+Ganache > Escolha uma das contas que você deseja utilizar no Metamask  
+Bote para mostrar a **chave privada**  
 ![Imagem da opcao mostrar a chave](showkey.png)  
-* Copie essa chave privada  
+
+Copie a **chave privada**  
 ![Imagem da chave privada](privatekey.png)  
-* No **Metamask** clique na sua conta  
-* Selecione importar conta  
+
+Metamask > Importe uma conta  
 ![Imagem da opcao importar account](importaccount.png)  
-* Importe com essa chave privada  
+
+Bote a **chave privada** da conta do Ganache  
 ![Imagem importando conta](importaccountkey.png)  
-* Tenha **CERTEZA** que trocou a conta para essa conta do **Ganache**  
- * Você não quer fazer esses testes em uma conta real sua  
+
+**Tenha CERTEZA que trocou a conta para essa conta do Ganache, você não quer fazer esses testes em uma conta real sua**  
 ![Imagem trocando de conta](changeaccount.png)  
 
 # Instalando Node.js
@@ -81,14 +71,14 @@
 
 ## Ubuntu
 
-* Abra o terminal em uma pasta vazia (pasta do projeto)
+* Abra o terminal na pasta do projeto
 * Digite `npm init`
 * Digite `npm install web3`
 
 # Instalando Truffle
 
 ## Windows 10
-* Abra o cmd ou powershell em uma pasta vazia (pasta do projeto)
+* Abra o terminal na pasta do projeto
 * Digite `npm install truffle`
  * Precisa do npm instalado e adicionado no path
 
@@ -116,18 +106,8 @@
 ## Ubuntu
 **NÃO CONSEGUI FAZER FUNCIONAR**
 
-* Abra o terminal
-* `sudo npm install -g truffle`
- * Se falhar:
-  * `sudo npm install -g truffle --scripts-prepend-node-path`
-   * Se falhar:
-     * Tente baixar uma versão mais velha
-     * `sudo npm install -g truffle@5.0.19 --scripts-prepend-node-path`
-      * Se falhar, vire superuser
-       * `sudo -i`
-       * `sudo npm install -g truffle@5.0.19 --scripts-prepend-node-path`
-        * Se falhar:
-         * `sudo apt-get install python2.7`
+* Abra o terminal na pasta do projeto
+* `npm instalal truffle@5.0.19`
         
 ### Box
 **Truffle** tem o conceito de Box para integrar **Truffle** com outras Frameworks
