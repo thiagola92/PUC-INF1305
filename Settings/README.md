@@ -74,6 +74,7 @@
 ### Snap
 * Abra o terminal
 * `sudo snap install --edge node --classic`
+ * Ou escolha uma versão que você considera mais segura/estável
 
 # Instalando Web3
 
