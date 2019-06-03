@@ -65,8 +65,6 @@
   * Aceite instalar Python 2 + Visual Studio Build Tools
 
 ## Ubuntu
-Escolha como vai instalar, o recomendado atualmente é apt  
-Se você escolher snap talvez você não consiga utilizar truffle  
 
 ### Apt
 * Abra o terminal
@@ -76,6 +74,15 @@ Se você escolher snap talvez você não consiga utilizar truffle
 ### Snap
 * Abra o terminal
 * `sudo snap install --edge node --classic`
+
+# Instalando Web3
+
+## Ubuntu
+```
+npm config set user 0
+npm config set unsafe-perm true
+sudo npm -g install web3 --scripts-prepend-node-path
+```
 
 # Instalando Truffle
 
@@ -106,6 +113,8 @@ Se você escolher snap talvez você não consiga utilizar truffle
   * Se não funcionar tente ir para a pasta client (`cd client`)
 
 ## Ubuntu
+**NÃO CONSEGUI FAZER FUNCIONAR**
+
 * Abra o terminal
 * `sudo npm install -g truffle`
   * Se falhar:
