@@ -76,24 +76,29 @@ Terminal > `npm init` > `npm install web3`
 
 ## Windows 10
 Abra o terminal na pasta do projeto ou caminhe até ela  
-Terminal > `npm install truffle`  
+Terminal > `npm -g install truffle`  
+(Instalação *global* pois *local* cria complicações no futuro)  
+
+Verifique se o seu truffle está funcionando  
+Abra o terminal na pasta do projeto ou caminhe até ela  
+Terminal > `truffle`  
+
+Se apareceu `truffle: The term 'truffle' is not recognized as the name...`  
+Em vez de `truffle` nos comandos, utilize `./node_modules/.bin/truffle`  
+Ex: `truffle compile` vai virar `./node_modules/.bin/truffle compile`  
 
 ### Box
 Truffle tem o conceito de Box para integrar Truffle com as outras Frameworks.  
 Lista das Box: https://truffleframework.com/boxes  
 Estou utilizando a Box para **React**  
 
+Abra o terminal na pasta do projeto ou caminhe até ela   
+Terminal > `truffle unbox react`  
 
-* Eu escolhi react
-* Chame `truffle unbox react`
- * Se falhar:
- * Tenha certeza que tenha git no caminho de variáveis
- * Tenha certeza que python 2 e visual studio build tools tenha sido instalado
- * Tente `npm install -g node-gyp`
- * Tente `npm install -g windows-build-tools`
-  * Se falhar verifique se ele deixou o "vs_BuildTools.exe" no diretório do seu usuário (ex: C:\Users\thiagola92\.windows-build-tools)
-  * Instale/atualize você mesmo clicando duas vezes
-* `npm install`
+Erros conhecidos:  
+* Git não está no PATH do Windows
+* Python 2 não estar instalado: https://www.python.org/downloads/release/python-2716/
+* VS Build Tools não estar instalado/atualizado: https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017  
 
 ### Running
 Abra o terminal na pasta do projeto ou caminhe até ela   
@@ -102,10 +107,11 @@ Terminal > `truffle compile` > `truffle migrate` > `cd client` > `npm run start`
 ## Ubuntu
 Abra o terminal na pasta do projeto ou caminhe até ela   
 Terminal > `npm install truffle@5.0.19`  
+(Instalação *local* pois *global* cria complicações no futuro)  
 
 Verifique se o seu truffle está funcionando  
 Abra o terminal na pasta do projeto ou caminhe até ela  
-Terminal > `truffle`
+Terminal > `truffle`  
 
 Se apareceu `truffle: command not found`  
 Em vez de `truffle` nos comandos, utilize `./node_modules/.bin/truffle`  
