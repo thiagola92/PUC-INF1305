@@ -429,3 +429,21 @@ A chave precisa ser uma variável básica mas o valor para o qual leva pode ser 
 
 Após criada para definir o valor de alguma chave ou pegar valor dela, utilize os colchetes.  
 `nomeExemplo[30] = 20;`
+
+Exemplo  
+````Solidity
+pragma solidity ^0.5.0;
+
+contract SamplesArchive {
+    mapping(uint256 => address) private sampleOwner;
+    
+    function registerSample(uint256 sample) public {
+        sampleOwner[sample] = msg.sender;
+    }
+    
+    function getSampleOwner(uint256 sample) public view returns (address) {
+        return sampleOwner[sample];
+    }
+    
+}
+```
