@@ -409,6 +409,7 @@ Em Solidity não existe o conceito de "null" ou "undefined", mas variáveis semp
     * `delete a`, faz um delete em todos os elementos na struct
 * `mapping(int => int) a`
     * `delete a`, não faz nada no mapping
+
 # Self Desctruct
 Destroi o contrato e envia todo o ether daquele contrato para o endereço escolhido.  
 `selfdestruct(address)`  
@@ -420,3 +421,11 @@ function endContract() public {
     selfdestruct(msg.sender);
 }
 ```
+
+# Mapping
+Mapping é o equivalente a HashMap de Java e Dictionary de Python.  
+`mapping(int => bool) nomeExemplo;`  
+A chave precisa ser uma variável básica mas o valor para o qual leva pode ser de qualquer tipo.  
+
+Após criada para definir o valor de alguma chave ou pegar valor dela, utilize os colchetes.  
+`nomeExemplo[30] = 20;`
