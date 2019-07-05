@@ -1,0 +1,8 @@
+npm install --save reactstrap react react-dom
+yarn add typescript
+npm install --save @types/react
+npm install @types/reactstrap
+yarn add typescript
+npm install @types/react-dom
+yarn add react-input-files
+npm install react-file-base64

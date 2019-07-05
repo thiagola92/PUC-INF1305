@@ -1,0 +1,187 @@
+@import './Icons.scss';
+
+html, body {
+  height: 100%;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+#react-root {
+  min-height: 100%;
+}
+
+.App {
+  height: 100% !important;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-size: cover;
+  height: calc(100% - 56px);
+  // background-image: url('./assets/bg-field.jpg');
+  background-size: cover;
+  background-position: center
+}
+
+.button {
+  width: 105px;
+  height: 20px;
+  //background-image: url('tiny.gif');
+  line-height: 20px;
+  padding-bottom: 2px;
+  vertical-align: middle;
+  font-family: "Lucida Grande", Geneva, Verdana, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  border: 1px solid transparent;
+}
+
+.button:hover {
+  //background-image: url('tiny_.gif');
+}
+
+.full-width {
+  width: 100% !important;
+}
+
+.notifications-wrapper {
+  pointer-events: none; // To make elements behind it clickable
+}
+
+.notifications-tr {
+  pointer-events: none;
+}
+
+.notification {
+  margin-top: 80px !important;
+  margin-right: 24px !important;
+  pointer-events: auto; // To make it clickable
+}
+
+.picture-upload {
+  position: relative;
+  cursor: pointer;
+  border-radius: 5px;
+  overflow: hidden;
+  &:before {
+    content: '';
+    background: rgba(0,0,0,.3);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+  &:after {
+    content: attr(title);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+  }
+  &:hover {
+    &:before,
+    &:after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+/* Datepicker */
+.rdt {
+  .rdtPicker {
+    display: none;
+    position: absolute;
+    background: white;
+    margin-top: -1px;
+    padding: 10px 20px;
+    border: 1px solid #ced4da;
+    cursor: pointer;
+    z-index: 2;
+    .rdtDay, 
+    .dow {
+      padding: 5px;
+      width: 34px;
+      height: 34px;
+    }
+    .rdtOld,
+    .rdtNew {
+      color: #ccc;
+    }
+    .rdtNext {
+      text-align: right;
+    }
+    .rdtSwitch {
+      text-align: center;
+    }
+  }
+  &.rdtOpen {
+    .rdtPicker {
+      display: block;
+    }
+  }
+  .rdtActive {
+    background: #00729B;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+  }
+  .rdtYear {
+    padding: 5px;
+    width: 34px;
+    height: 34px;
+  }
+  .rdtMonth {
+    padding: 5px;
+    width: 34px;
+    height: 34px;
+  }
+  .rdtDisabled {
+    color: rgb(153, 153, 153);
+    cursor: not-allowed;
+    background: none;
+  }
+}
+.form-control[readonly] {
+  background: white;
+}
+.center-h {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapword{
+  white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+  white-space: -webkit-pre-wrap; /*Chrome & Safari */ 
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  white-space: pre-wrap;       /* css-3 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  word-break: break-all;
+  white-space: normal;
+}
+
+/* Esconde o input */
+input[type='file'] {
+  display: none
+}
+
+/* Aparência que terá o seletor de arquivo */
+label {
+  background-color: #3498db;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px;
+  padding: 6px 20px
+}

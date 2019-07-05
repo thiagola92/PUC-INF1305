@@ -1,0 +1,15 @@
+/* Google Material Icons */
+@import "~material-design-icons/iconfont/material-icons.css";
+
+
+/* Custom icon styling */
+.material-icons {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: bottom;
+}
+
+.material-icons.md-sm {
+  font-size: 12
+}
